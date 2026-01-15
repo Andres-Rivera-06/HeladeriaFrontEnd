@@ -1,0 +1,4 @@
+// shadcn/ui components will be installed here
+// Run: npx shadcn-ui@latest init
+
+export {};

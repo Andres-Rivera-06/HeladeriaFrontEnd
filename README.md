@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Heladería POS - Sistema de Punto de Venta
 
-## Getting Started
+Sistema de punto de venta para heladería construido con Next.js 15, TypeScript, Tailwind CSS, Zustand y Axios.
 
-First, run the development server:
+## 🚀 Estructura del Proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── login/             # Página de inicio de sesión
+│   ├── pos/               # Punto de venta
+│   ├── dashboard/         # Dashboard con métricas
+│   └── products/          # Gestión de productos
+│
+├── components/
+│   ├── layout/            # Navbar, Sidebar
+│   ├── pos/               # ProductCard, Cart, CartItem
+│   ├── charts/            # Gráficos de ventas
+│   └── ui/                # Componentes UI de shadcn
+│
+├── store/                 # Estado global con Zustand
+├── services/              # Servicios API
+├── hooks/                 # Custom hooks
+├── types/                 # TypeScript types
+├── utils/                 # Utilidades
+└── styles/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Instalación
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Instalar dependencias
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Variables de Entorno
 
-## Learn More
+Configura las siguientes variables en `.env.local`:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8080/api
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏃‍♂️ Ejecutar el Proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+# Modo desarrollo
+npm run dev
 
-## Deploy on Vercel
+# Build para producción
+npm run build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Iniciar en producción
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📚 Tecnologías
+
+- **Next.js 15** - Framework React
+- **TypeScript** - Tipado estático
+- **Tailwind CSS 4** - Estilos
+- **Zustand** - Estado global
+- **Axios** - Cliente HTTP
+- **Recharts** - Gráficos
+
+## 🎨 Componentes UI
+
+Para instalar componentes de shadcn/ui:
+
+```bash
+npx shadcn-ui@latest init
+npx shadcn-ui@latest add button
+npx shadcn-ui@latest add card
+```
+
+## 📱 Páginas
+
+- `/` - Página principal
+- `/login` - Inicio de sesión
+- `/pos` - Punto de venta
+- `/dashboard` - Dashboard con métricas
+- `/products` - Gestión de productos
